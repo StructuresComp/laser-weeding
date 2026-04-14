@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+
+# Data
+processed_crops/
+processed_no_segment/
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
