@@ -39,8 +39,8 @@ import csv
 import time
 
 # --- CONFIG (identical to other sweeps) ---
-IMG_DIR = '/home/jaehwan/Desktop/yolo26/Laser Weeding Training/processed_crops'
-LBL_DIR = '/home/jaehwan/Desktop/yolo26/Laser Weeding Training/keypoint_labels'
+IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_crops'
+LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
 
 TRAIN_SIZE = 224
 SIGMA = 2.0

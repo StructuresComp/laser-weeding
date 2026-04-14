@@ -43,7 +43,7 @@ from generalization_sweep import (
 # --- CONFIG ---
 SIZES_TO_ANALYZE = [100, 200, 300]   # focus on the small-data regime where outliers matter
 WORST_K = 12                         # how many worst predictions to visualize per N
-OUTPUT_DIR = '/home/jaehwan/Desktop/yolo26/Laser Weeding Training/script/outlier_analysis'
+OUTPUT_DIR = '/home/jaehwan/Desktop/laser-weeding/results/outlier_analysis'
 
 # ImageNet normalization (used by the dataset) — needed to undo for visualization
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406])

@@ -39,8 +39,8 @@ import csv
 import time
 
 # --- CONFIG ---
-IMG_DIR = '/home/jaehwan/Desktop/yolo26/Laser_Weeding_Training/processed_no_segment'
-LBL_DIR = '/home/jaehwan/Desktop/yolo26/Laser_Weeding_Training/keypoint_labels'
+IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_no_segment'
+LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
 
 TRAIN_SIZE = 224
 BATCH_SIZE = 8

@@ -10,6 +10,9 @@ __pycache__/
 # Data
 processed_crops/
 processed_no_segment/
+combined/
+left/
+right/
 *.zip
 
 # OS junk
