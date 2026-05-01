@@ -1,0 +1,11 @@
+{
+  "arch": "heatmap",
+  "crops": "raw",
+  "best_val_px_err": 10.170012234519216,
+  "best_epoch": 58,
+  "total_epochs": 83,
+  "train_seconds": 119.37257719039917,
+  "n_train": 1212,
+  "n_val": 239,
+  "weights": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_heatmap_raw.pt"
+}

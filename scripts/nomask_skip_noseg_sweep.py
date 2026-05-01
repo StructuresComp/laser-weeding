@@ -27,8 +27,10 @@ import csv
 import time
 
 # --- CONFIG ---
-IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_no_segment'
-LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
+# IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_no_segment'
+# LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
+IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/extracted_crops/processed_crops'
+LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/extracted_crops/keypoint_labels'
 
 TRAIN_SIZE = 224
 SIGMA = 2.0

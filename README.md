@@ -8,6 +8,19 @@ nearby crops.
 
 ---
 
+## Where to start
+
+| You want to… | Go here |
+|---|---|
+| **Reproduce the end-to-end paper table** (keypoint vs heatmap × YOLO-detect vs YOLO-segment + pose baseline, on the Oxnard test split) | [`oxnard_pipeline/README.md`](oxnard_pipeline/) — full step-by-step recipe |
+| Retrain the Phase-1 segmentation model `best_pigweed_145.pt` | [`Oxnard-Pigweed-1/README.md`](Oxnard-Pigweed-1/) — Roboflow export + YOLO command |
+| Reproduce the older Phase-2 architecture sweeps (heatmap vs soft-argmax vs direct, across data sizes) | The "Reproducing the results" section below + `scripts/*_sweep.py` |
+
+The headline end-to-end result is in [`oxnard_pipeline/README.md`](oxnard_pipeline/README.md):
+**seg + heatmap (soft-argmax) → mean Dist 3.77 / median 2.83** on the held-out test split.
+
+---
+
 ## Motivation
 
 In precision agriculture, computer-vision-guided lasers offer a chemical-free
@@ -163,13 +176,23 @@ accuracy buys us a much faster YOLO detection stage at inference time.
 
 ```
 laser-weeding/
-├── README.md                         ← this file
+├── README.md                         ← this file (front door)
+├── oxnard_pipeline/                  ← END-TO-END PIPELINE: keypoint vs heatmap × det vs seg
+│   ├── README.md                     ←   start here to reproduce the paper table
+│   ├── 01_prep.py                    ←   builds detection + masked-crop datasets
+│   ├── build_unmasked_crops.py       ←   builds raw-crop dataset (no segmentation)
+│   ├── 04_phase1_pose_prep.py        ←   builds the YOLO-pose dataset
+│   ├── train_keypoint_v2.py          ←   Phase-2 trainer (KP_ARCH × KP_CROPS, 4 cells)
+│   └── compare_all.py                ←   end-to-end eval + chart generation
+├── Oxnard-Pigweed-1/                 ← Roboflow seg dataset → trains best_pigweed_145.pt
+│   └── README.md
 ├── data/
 │   └── keypoint_labels/              ← (x, y) pixel labels, one .txt per image
 ├── figures/
-│   └── comparison.png                ← mean/median error vs N, all methods
+│   └── comparison.png                ← mean/median error vs N, all methods (Phase-2 sweeps)
 ├── results/
-│   ├── sweeps/                       ← raw CSV for every sweep variant
+│   ├── comparison/                   ← end-to-end comparison output (JSON + 2 charts)
+│   ├── sweeps/                       ← raw CSV for every Phase-2 sweep variant
 │   └── outlier_analysis/             ← worst-case prediction plots for heatmap
 └── scripts/
     ├── segment_processing.py         ← data prep: segmentation → cropped plant

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Pigweed']
+
+roboflow:
+  workspace: laser-weeding
+  project: oxnard-pigweed
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/laser-weeding/oxnard-pigweed/dataset/1

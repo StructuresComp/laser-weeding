@@ -39,8 +39,11 @@ import csv
 import time
 
 # --- CONFIG ---
-IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_no_segment'
-LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
+# IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/processed_no_segment'
+# LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/data/keypoint_labels'
+IMG_DIR = '/home/jaehwan/Desktop/laser-weeding/extracted_crops/processed_crops'
+LBL_DIR = '/home/jaehwan/Desktop/laser-weeding/extracted_crops/keypoint_labels'
+
 
 TRAIN_SIZE = 224
 BATCH_SIZE = 8
@@ -141,8 +144,8 @@ class MeristemSoftArgmaxSkip(nn.Module):
         ys = torch.linspace(0, train_size - 1, soft_res)
         xs = torch.linspace(0, train_size - 1, soft_res)
         grid_y, grid_x = torch.meshgrid(ys, xs, indexing='ij')
-        self.register_buffer('grid_x', grid_x)
-        self.register_buffer('grid_y', grid_y)
+        self.register_buffer('grid_x', grid_x.clone())
+        self.register_buffer('grid_y', grid_y.clone())
 
     def forward(self, x):
         # Encoder with skip captures

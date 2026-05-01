@@ -1,0 +1,11 @@
+{
+  "arch": "direct",
+  "crops": "masked",
+  "best_val_px_err": 10.583288886432369,
+  "best_epoch": 149,
+  "total_epochs": 150,
+  "train_seconds": 184.98587036132812,
+  "n_train": 1212,
+  "n_val": 239,
+  "weights": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_direct_masked.pt"
+}

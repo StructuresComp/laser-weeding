@@ -1,20 +1,58 @@
+# --- Python ---
 __pycache__/
 *.pyc
 *.pyo
 
-# Model weights
+# --- Model weights (rebuild from training scripts) ---
 *.pt
 *.pth
 *.onnx
 
-# Data
-processed_crops/
-processed_no_segment/
-combined/
+# --- Source / raw data (not version-controlled — large, lives on lab Box) ---
 left/
 right/
-*.zip
+combined/
+labelled/
+processed_crops/
+processed_no_segment/
+extracted_crops/
+extracted_crops_wsd/
 
-# OS junk
+# --- Generated datasets (rebuild via oxnard_pipeline/01_prep.py + build_unmasked_crops.py + 04_phase1_pose_prep.py) ---
+datasets/
+
+# --- Roboflow dataset images (keep yaml + READMEs only, drop the 145 jpgs) ---
+Oxnard-Pigweed-1/train/
+Oxnard-Pigweed-1/valid/
+Oxnard-Pigweed-1/test/
+
+# --- Training/eval outputs ---
+# Default: ignore everything under results/ ...
+results/*
+# ... but keep the small artifacts the READMEs reference:
+!results/comparison/
+!results/sweeps/
+
+# --- Stray CSVs in scripts/ (canonical copies live in results/sweeps/) ---
+scripts/*.csv
+
+# --- Exploratory / superseded scripts (not part of the paper reproduction path) ---
+# WSD (Wisconsin) work, separate dataset, not in this paper:
+scripts/wsd_*.py
+# Older oxnard prep / eval / training scripts — superseded by oxnard_pipeline/:
+scripts/oxnard_prep.py
+scripts/oxnard_pose_prep.py
+scripts/oxnard_train_kp.py
+scripts/oxnard_eval.py
+scripts/oxnard_eval_v2.py
+scripts/oxnard_eval_2stage_masked.py
+scripts/oxnard_eval_pose.py
+scripts/oxnard_e2e.py
+scripts/oxnard_pseudo.py
+scripts/extract_crops.py
+scripts/softargmax_skip_newdata_sweep.py
+
+# --- Misc ---
+*.zip
 .DS_Store
 Thumbs.db

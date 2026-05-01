@@ -135,8 +135,8 @@ class MeristemSoftArgmax(nn.Module):
         ys = torch.linspace(0, train_size - 1, soft_res)
         xs = torch.linspace(0, train_size - 1, soft_res)
         grid_y, grid_x = torch.meshgrid(ys, xs, indexing='ij')  # both (SOFT_RES, SOFT_RES)
-        self.register_buffer('grid_x', grid_x)
-        self.register_buffer('grid_y', grid_y)
+        self.register_buffer('grid_x', grid_x.clone())
+        self.register_buffer('grid_y', grid_y.clone())
 
     def forward(self, x):
         feat = self.encoder(x)              # (B, 576, 7, 7)
