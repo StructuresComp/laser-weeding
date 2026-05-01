@@ -118,7 +118,7 @@ Outputs:
 
 - Phase-1 predictions are matched to GT by IoU ≥ 0.30 against the GT bbox; unmatched detections are dropped (so a false-positive far from any plant doesn't pollute the mean).
 - For each kept prediction, the predicted stem is paired with the IoU-best GT stem.
-- `Dist` is the same formula as `calculate_mse` in the original paper's `test.py`: per-sample √(squared_px) divided by image diagonal in pixels, averaged, ×1000.
+- `Dist` = per-sample √(squared_px) divided by the image diagonal in pixels (1468.6 for 1280×720), averaged across kept predictions, ×1000. Lower is better.
 
 ## Architecture notes (why heatmap beats direct)
 

@@ -160,7 +160,7 @@ def score(all_pred, all_gt):
         'median_px': float(np.median(px)),
         'mean_dist': float(norm.mean() * 1000),
         'median_dist': float(np.median(norm) * 1000),
-        'paper_raw_mse': float((norm**2).mean()),
+        'raw_mse': float((norm**2).mean()),
     }
 
 
@@ -332,7 +332,7 @@ def plot_results(results, train_stats):
 
     fig, axes = plt.subplots(1, 3, figsize=(18, 5.5))
 
-    # Panel 1: accuracy (mean and median Dist), with paper reference line
+    # Panel 1: accuracy (mean and median Dist)
     ax = axes[0]
     x = np.arange(len(names))
     w = 0.35

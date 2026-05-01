@@ -5,7 +5,7 @@
     "median_px": 5.707602820041028,
     "mean_dist": 4.745925686253555,
     "median_dist": 3.886411713727227,
-    "paper_raw_mse": 3.606673753319042e-05,
+    "raw_mse": 3.606673753319042e-05,
     "name": "det_direct",
     "n_total_phase1": 310,
     "n_imgs": 85,
@@ -14,10 +14,10 @@
     "mask_crops": false,
     "phase1_path": "/home/jaehwan/Desktop/laser-weeding/results/oxnard_det/weights/best.pt",
     "phase2_path": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_direct_raw.pt",
-    "total_eval_seconds": 3.6019399166107178,
-    "phase1_seconds": 2.390033483505249,
-    "phase2_seconds": 0.8866338729858398,
-    "ms_per_image": 42.37576372483198
+    "total_eval_seconds": 3.6060409545898438,
+    "phase1_seconds": 2.3806960582733154,
+    "phase2_seconds": 0.9173116683959961,
+    "ms_per_image": 42.42401123046875
   },
   {
     "n_kept": 234,
@@ -25,7 +25,7 @@
     "median_px": 4.460028580653924,
     "mean_dist": 3.918904419077031,
     "median_dist": 3.0369154732611605,
-    "paper_raw_mse": 2.6260663875244057e-05,
+    "raw_mse": 2.6260663875244057e-05,
     "name": "det_heatmap",
     "n_total_phase1": 310,
     "n_imgs": 85,
@@ -34,10 +34,10 @@
     "mask_crops": false,
     "phase1_path": "/home/jaehwan/Desktop/laser-weeding/results/oxnard_det/weights/best.pt",
     "phase2_path": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_heatmap_raw.pt",
-    "total_eval_seconds": 2.7680776119232178,
-    "phase1_seconds": 1.6048812866210938,
-    "phase2_seconds": 0.8904862403869629,
-    "ms_per_image": 32.565618963802564
+    "total_eval_seconds": 2.9683966636657715,
+    "phase1_seconds": 1.791820764541626,
+    "phase2_seconds": 0.8967063426971436,
+    "ms_per_image": 34.92231369018555
   },
   {
     "n_kept": 267,
@@ -45,7 +45,7 @@
     "median_px": 4.683027585818508,
     "mean_dist": 4.218166971739851,
     "median_dist": 3.18875959646785,
-    "paper_raw_mse": 3.1772860462684374e-05,
+    "raw_mse": 3.1772860462684374e-05,
     "name": "seg_direct",
     "n_total_phase1": 423,
     "n_imgs": 85,
@@ -54,10 +54,10 @@
     "mask_crops": true,
     "phase1_path": "/home/jaehwan/Desktop/laser-weeding/best_pigweed_145.pt",
     "phase2_path": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_direct_masked.pt",
-    "total_eval_seconds": 3.705721139907837,
-    "phase1_seconds": 1.8335719108581543,
-    "phase2_seconds": 1.0875964164733887,
-    "ms_per_image": 43.596719293033374
+    "total_eval_seconds": 3.6366822719573975,
+    "phase1_seconds": 1.8311917781829834,
+    "phase2_seconds": 1.0565688610076904,
+    "ms_per_image": 42.784497317145856
   },
   {
     "n_kept": 267,
@@ -65,7 +65,7 @@
     "median_px": 4.161310655772948,
     "mean_dist": 3.7744300492255984,
     "median_dist": 2.83351294527142,
-    "paper_raw_mse": 2.7705387754441826e-05,
+    "raw_mse": 2.7705387754441826e-05,
     "name": "seg_heatmap",
     "n_total_phase1": 423,
     "n_imgs": 85,
@@ -74,10 +74,10 @@
     "mask_crops": true,
     "phase1_path": "/home/jaehwan/Desktop/laser-weeding/best_pigweed_145.pt",
     "phase2_path": "/home/jaehwan/Desktop/laser-weeding/models/keypoint_oxnard_heatmap_masked.pt",
-    "total_eval_seconds": 3.5246756076812744,
-    "phase1_seconds": 1.7253708839416504,
-    "phase2_seconds": 1.0828194618225098,
-    "ms_per_image": 41.466771855073816
+    "total_eval_seconds": 3.604680299758911,
+    "phase1_seconds": 1.7869796752929688,
+    "phase2_seconds": 1.1021075248718262,
+    "ms_per_image": 42.40800352657542
   },
   {
     "n_kept": 220,
@@ -85,7 +85,7 @@
     "median_px": 5.781938189969697,
     "mean_dist": 4.838673323844657,
     "median_dist": 3.937028034018581,
-    "paper_raw_mse": 4.427525909639123e-05,
+    "raw_mse": 4.427525909639123e-05,
     "name": "pose_joint",
     "n_total_phase1": 265,
     "n_imgs": 85,
@@ -94,9 +94,9 @@
     "mask_crops": false,
     "phase1_path": "/home/jaehwan/Desktop/laser-weeding/results/oxnard_pose/weights/best.pt",
     "phase2_path": "/home/jaehwan/Desktop/laser-weeding/results/oxnard_pose/weights/best.pt",
-    "total_eval_seconds": 2.571671485900879,
-    "phase1_seconds": 2.571671485900879,
+    "total_eval_seconds": 2.58089280128479,
+    "phase1_seconds": 2.58089280128479,
     "phase2_seconds": 0.0,
-    "ms_per_image": 30.2549586576574
+    "ms_per_image": 30.363444720997528
   }
 ]

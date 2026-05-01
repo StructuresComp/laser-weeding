@@ -3,8 +3,8 @@ Unified Phase-2 keypoint trainer.
 
 Supports two architectures and two crop styles via env vars:
   KP_ARCH=heatmap  (default)  — soft-argmax readout + U-Net skip connections,
-                                 SmoothL1 loss on (x, y) coordinates (matches the
-                                 paper-style architecture from softargmax_skip_sweep.py)
+                                 SmoothL1 loss on (x, y) coordinates (architecture
+                                 from scripts/softargmax_skip_sweep.py)
   KP_ARCH=direct              — global-pooled MLP -> (x, y), MSE on normalized coords
   KP_CROPS=masked  (default)  — datasets/oxnard_kp/      (background blacked out)
   KP_CROPS=raw                — datasets/oxnard_kp_raw/  (raw bbox content)
@@ -80,7 +80,7 @@ class HeatmapHead(nn.Module):
     """Soft-argmax + U-Net skip connections. Returns (x, y) in pixel space [0, TRAIN_SIZE-1].
 
     Mirrors MeristemSoftArgmaxSkip from scripts/softargmax_skip_noseg_sweep.py — the
-    paper-style architecture that beat plain regression on the original sweep.
+    architecture that beat plain regression on the original sweep.
     """
     def __init__(self, soft_res=SOFT_RES, train_size=TRAIN_SIZE):
         super().__init__()

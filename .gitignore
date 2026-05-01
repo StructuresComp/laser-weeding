@@ -36,8 +36,7 @@ results/*
 # --- Stray CSVs in scripts/ (canonical copies live in results/sweeps/) ---
 scripts/*.csv
 
-# --- Exploratory / superseded scripts (not part of the paper reproduction path) ---
-# WSD (Wisconsin) work, separate dataset, not in this paper:
+# --- Exploratory / superseded scripts (not part of the reproduction path) ---
 scripts/wsd_*.py
 # Older oxnard prep / eval / training scripts — superseded by oxnard_pipeline/:
 scripts/oxnard_prep.py

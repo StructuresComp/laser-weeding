@@ -38,10 +38,10 @@ yolo segment train \
     model=yolov8m-seg.pt \
     data=Oxnard-Pigweed-1/data.yaml \
     epochs=145 imgsz=1280 batch=8 seed=0 \
-    project=results name=wsd_seg
+    project=results name=oxnard_pigweed_seg
 
 # After training, copy the best weights to the path the pipeline expects:
-cp results/wsd_seg/weights/best.pt best_pigweed_145.pt
+cp results/oxnard_pigweed_seg/weights/best.pt best_pigweed_145.pt
 ```
 
 ## Where this fits in the bigger picture

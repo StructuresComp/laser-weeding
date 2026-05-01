@@ -156,9 +156,9 @@ def main():
     print()
     print(f"Mean px error:    {px_err.mean():.2f}")
     print(f"Median px error:  {np.median(px_err):.2f}")
-    print(f"Mean Dist:   {norm.mean()*1000:.4f}     (paper: 2.4838)")
+    print(f"Mean Dist:   {norm.mean()*1000:.4f}")
     print(f"Median Dist: {np.median(norm)*1000:.4f}")
-    print(f"Paper raw MSE: {(norm**2).mean():.6f}")
+    print(f"Raw MSE:     {(norm**2).mean():.6f}")
     print("=" * 70)
 
 
